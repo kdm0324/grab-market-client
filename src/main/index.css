@@ -3,27 +3,6 @@
   padding: 0;
 }
 /* 모든 속성에 대한 초기화 */
-#header {
-  height: 64px;
-  border-bottom: 1px solid gray;
-  display: flex;
-  justify-content: center;
-}
-
-#body {
-  height: 100vh;
-  /* background-color: blue; */
-  width: 1024px;
-  margin: 0 auto;
-  /* margin: 0 auto 자식이 부모를 기준으로 가운데 정렬을 시킬 때; */
-  padding-bottom: 124px;
-}
-
-#footer {
-  height: 10%;
-  background-color: rgb(230, 230, 230);
-  padding-top: 100px;
-}
 
 #banner {
   height: 300px;
