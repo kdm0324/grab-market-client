@@ -21,6 +21,7 @@ function ProductPage() {
   }, []);
   console.log(product);
 
+  //비동기처리로 인한 방어코드 작성
   if (product === null) {
     return <h1>상품 정보를 받고 있습니다...</h1>;
   }
@@ -37,7 +38,8 @@ function ProductPage() {
       <div id="contents-box">
         <div id="name">{product.name}</div>
         <div id="price">{product.price}원</div>
-        <div id="decription">{product.description}</div>
+        <div id="createdAt">2021년 12월 18일</div>
+        <div id="description">{product.description}</div>
       </div>
     </div>
   );

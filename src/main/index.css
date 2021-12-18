@@ -1,25 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-/* 모든 속성에 대한 초기화 */
-
 #banner {
   height: 300px;
   background-color: yellow;
-}
-
-#header-area {
-  width: 1024px;
-  height: 100%;
-  /* margin: 0 auto; */
-  display: flex;
-  align-items: center;
-}
-
-#header-area > img {
-  width: 128px;
-  height: 36px;
 }
 
 #banner > img {
