@@ -28,7 +28,7 @@ body,
   justify-content: space-between;
 }
 
-#header-area > img {
+#header-area > a > img {
   width: 128px;
   height: 36px;
 }
