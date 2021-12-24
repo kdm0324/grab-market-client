@@ -40,18 +40,17 @@
 }
 
 .product-name {
-  font-size: 1vh;
+  font-size: 16px;
 }
 
 .product-price {
-  font-size: 1vh;
+  font-size: 16px;
   margin-top: 4px;
 }
 
 .product-seller {
   display: flex;
   align-items: center;
-  margin-top: 12px;
 }
 
 .product-avatar {
@@ -66,4 +65,11 @@
 .product-footer {
   display: flex;
   justify-items: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.product-date {
+  font-size: 12px;
+  color: rgb(136, 136, 136);
 }

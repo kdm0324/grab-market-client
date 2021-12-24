@@ -2,12 +2,18 @@ import "./index.css";
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import { API_URL } from "../config/constans.js";
+
+dayjs.locale("ko");
+dayjs.extend(relativeTime);
 
 function MainPage() {
   const [products, setProducts] = React.useState([]);
   React.useEffect(function () {
     axios
-      .get("http://localhost:8080/products")
+      .get(`${API_URL}/products`)
       .then(function (result) {
         console.log(result);
         const products = result.data.products;
@@ -43,7 +49,9 @@ function MainPage() {
                         alt=""
                       />
                       <span>{product.seller}</span>
-                      <span>{product.createdAt}</span>
+                      <span className="product-date">
+                        {dayjs(product.createdAt).fromNow()}
+                      </span>
                     </div>
                   </div>
                 </div>

@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 import "./index.css";
+import { API_URL } from "../config/constans";
 
 function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = React.useState(null);
   React.useEffect(function () {
     axios
-      .get(`http://localhost:8080/products/${id}`)
+      .get(`${API_URL}/products/${id}`)
       .then(function (result) {
         console.log(result);
         setProduct(result.data.product);
