@@ -8,12 +8,10 @@ function ProductPage() {
   const [product, setProduct] = React.useState(null);
   React.useEffect(function () {
     axios
-      .get(
-        `https://94def6f7-ce20-4481-8a64-29f2cbed30c6.mock.pstmn.io/products/${id}`
-      )
+      .get(`http://localhost:8080/products/${id}`)
       .then(function (result) {
         console.log(result);
-        setProduct(result.data);
+        setProduct(result.data.product);
       })
       .catch(function (error) {
         console.error("에러 발생 : ", error);
